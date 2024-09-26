@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org ">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Form</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?cs=srgb&dl=bookcase-books-bookshelves-159711.jpg&fm=jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+        
+        .form-container {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 500px;
+
+          
+           color: white;
+           background-repeat: no-repeat;
+           background-position: center;
+           
+
+           
+            
+           
+        }
+        
+        form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            opacity: 50%;
+
+        }
+        form input:hover{
+            opacity: 100% ;
+            border: none;
+        }
+        
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        form button:hover {
+            background-color: #218838;
+        }
+        
+        
+        
+    </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <form action="#" th:action="@{/dsave}" th:object="${book}"
+                method="post">
+                <h2>Enter  Details for update !!</h2>
+
+                <label for="name">Book Name:</label>
+                <input type="text" th:field="*{bookname}" id="name" name="name"
+                    required>
+
+                <label for="email">Book Price:</label>
+                <input type="number" th:field="*{bookprice}" id="email"
+                    name="email" required>
+
+                <button  type="submit" href="@{bookview}">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

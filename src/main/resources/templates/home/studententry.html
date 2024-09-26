@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library Entry for Student</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: scale(1.02);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4a5568;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-size: 1rem;
+        }
+        
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #2d3748;
+            background-color: #f7fafc;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus {
+            outline: none;
+            border-color: #5a67d8;
+            background-color: #edf2f7;
+        }
+        
+        button.submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #5a67d8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        button.submit-btn:hover {
+            background-color: #434190;
+        }
+        
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+   <div class="container">
+        <h2>Library Entry Form</h2>
+        <form action="#" th:action="@{/ssave}" th:object="${student}" method="POST">
+            <div class="form-group">
+                <label for="studentId">Student Name: </label>
+                <input type="text" id="studentId" name="studentId" placeholder="Enter your student ID" required>
+            </div>
+            <div class="form-group">
+                <label for="studentName">Student No.</label>
+                <input type="number" id="studentName" name="studentName" placeholder="Enter your number" required>
+            </div>
+           
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

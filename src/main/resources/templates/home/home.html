@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Book Project</title>
+    <link rel="stylesheet" href="styles.css">
+ <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        color: #333;
+    }
+    
+    .entry-container {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+    }
+    
+    .entry-button {
+        display: block;
+        width: 250px;
+        height: 250px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        text-decoration: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+        color: #333;
+    }
+    
+    .entry-button:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 0, 0, 0.258);
+    }
+    
+    .entry-icon {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .entry-text h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .entry-text p {
+        font-size: 16px;
+        color: #666;
+    }
+    
+    footer {
+        margin-top: 40px;
+        text-align: center;
+        color: #999;
+        font-size: 14px;
+    }
+    
+ </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Spring Book Project</h1>
+    </header>
+
+    <div class="entry-container">
+        <a href="/home/bookentry" class="entry-button">
+            <div class="entry-icon">
+                📚
+            </div>
+            <div class="entry-text">
+                <h2>Book Entry</h2>
+                <p>Manage and add new books to the system.</p>
+            </div>
+        </a>
+
+        <a href="/home/facultyentry" class="entry-button">
+            <div class="entry-icon">
+                👨‍🏫
+            </div>
+            <div class="entry-text">
+                <h2>Faculty Entry</h2>
+                <p>Manage faculty details and assignments.</p>
+            </div>
+        </a>
+
+        <a href="/home/studententry" class="entry-button">
+            <div class="entry-icon">
+                🎓
+            </div>
+            <div class="entry-text">
+                <h2>Student Entry</h2>
+                <p>Manage student records and registrations.</p>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Spring Book Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

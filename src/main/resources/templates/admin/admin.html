@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Book Project</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+        
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 18px;
+        }
+        
+        .details-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px;
+        }
+        
+        .detail-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px;
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            background-color: #007bff56;
+        }
+        
+        .card-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .detail-card h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .detail-card p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .detail-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.5;
+        }
+        
+        .detail-link:hover {
+            background-color: #0056b3;
+        }
+        
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Spring Book Project</h1>
+        <p>Manage and view details about books, faculty, and students.</p>
+    </header>
+
+    <div class="details-container">
+        <div class="detail-card">
+            <div class="card-icon">
+                📚
+            </div>
+            <h2>Book Details</h2>
+            <p>View and manage book records, add new books, and edit details.</p>
+            <a href="/admin/bookview" class="detail-link">View Book Details</a>
+        </div>
+
+        <div class="detail-card">
+            <div class="card-icon">
+                👨‍🏫
+            </div>
+            <h2>Faculty Details</h2>
+            <p>View and manage faculty records, assign courses, and update information.</p>
+            <a href="/admin/facultyview" class="detail-link">View Faculty Details</a>
+        </div>
+
+        <div class="detail-card">
+            <div class="card-icon">
+                🎓
+            </div>
+            <h2>Student Details</h2>
+            <p>View and manage student records, track progress, and manage enrollments.</p>
+            <a href="/student-details" class="detail-link">View Student Details</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Spring Book Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
